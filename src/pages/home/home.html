@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Around me</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="list">
+    <div>
+        <div class="input-label">
+            Category
+        </div>
+
+        <select class="category">
+            <option selected>Restaurant</option>
+            <option >Gas Station</option>
+            <option>Safeway</option>
+        </select>
+
+    </div>
+  </div>  
+
+<div padding>
+  <ion-segment [(ngModel)]="cat">
+    <ion-segment-button value="mapview" (click)="loadMap()">
+      Map View
+    </ion-segment-button>
+     <ion-segment-button value="lists">
+      Lists
+    </ion-segment-button>
+  </ion-segment>
+</div>
+
+<div [ngSwitch]="cat" class="tabview" ng-change="loadMap()">
+  <ion-list *ngSwitchCase="'mapview'" >
+    <ion-item>
+        <div #map id="map"></div>   
+    </ion-item>
+  </ion-list>
+  <ion-list *ngSwitchCase="'lists'">
+    <div *ngFor="let unit of places">
+      <ion-item class="list-item">
+          <div class="img">
+              <img src = "{{unit.icon}}">
+          </div>
+          <div class="desc"> 
+                <span>{{unit.name}}</span><br/><br/>
+                <span>{{unit.vicinity}}</span>
+          </div>
+      </ion-item>
+    </div>
+  </ion-list>
+</div>
+
+</ion-content>
