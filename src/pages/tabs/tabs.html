@@ -1,7 +1,31 @@
 <ion-tabs>
-  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="tab2Root" tabTitle="Star" tabIcon="star"></ion-tab>  
-  <ion-tab [root]="tab3Root" tabTitle="Search" tabIcon="search"></ion-tab>
-  <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
-  <ion-tab [root]="tab5Root" tabTitle="More" tabIcon="md-list"></ion-tab>
-</ion-tabs>
+    <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>
+    <ion-tab [root]="tab2Root" tabTitle="Star" tabIcon="star"></ion-tab>  
+    <ion-tab [root]="tab3Root" tabTitle="Search" tabIcon="search"></ion-tab>
+    <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>
+    <ion-tab tabTitle="More" tabIcon="md-list" (ionSelect)="presentActionSheet()"></ion-tab>
+  </ion-tabs>
+<!-- <ion-nav [root]="root"></ion-nav>
+<ion-footer style="font-size:20px;">
+  <ion-grid>
+    <ion-row style="text-align:center">
+      <ion-col (click)="setRootPage('tab1Root')">
+        <ion-icon name="home"></ion-icon>
+      </ion-col>
+      <ion-col (click)="setRootPage('tab2Root')">
+        <ion-icon name="star"></ion-icon>
+      </ion-col>
+      <ion-col (click)="setRootPage('tab3Root')">
+        <ion-icon name="search"></ion-icon>
+      </ion-col>
+      <ion-col (click)="setRootPage('tab4Root')">
+        <ion-icon name="contacts"></ion-icon>
+      </ion-col>
+      <ion-col (click)="presentActionSheet()">
+        <ion-icon name="md-list"></ion-icon>
+      </ion-col>
+  </ion-row>
+  </ion-grid>
+  
+</ion-footer> -->
+
