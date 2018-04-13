@@ -40,26 +40,31 @@ export class TabsPage {
         {
           text: 'LogOut',
           role: 'destructive',
+          cssClass:'myclass',
           handler: () => {
             console.log('Destructive clicked');
           }
         },{
           text: 'Settings',
+          cssClass:'myclass',
           handler: () => {
             console.log('Archive clicked');
           }
         },{
           text: 'About',
+          cssClass:'myclass',
           handler: () => {
             console.log('Archive clicked');
           }
         },{
           text: 'Discover',
+          cssClass:'myclass',
           handler: () => {
             console.log('Archive clicked');
           }
         },{
           text: 'Cancel',
+          cssClass:'cancel',
           role: 'cancel',
           handler: () => {
             console.log('Cancel clicked');
